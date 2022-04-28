@@ -16,9 +16,7 @@ class MyApp extends StatelessWidget {
     return FutureBuilder(
       future: _initialization,
       builder: (context, snapshot) {
-        if (snapshot.hasError) {
-          print("Something went wrong");
-        }
+        if (snapshot.hasError) {}
         if (snapshot.connectionState == ConnectionState.done) {
           return MaterialApp(
             title: 'Flutter Firestore CRUD',
